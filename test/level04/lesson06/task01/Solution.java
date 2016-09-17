@@ -6,7 +6,7 @@ package com.javarush.test.level04.lesson06.task01;
 
 import java.io.*;
 
-public class Solution //12235
+public class Solution //122353
 {
     public static void main(String[] args) throws Exception
     {
