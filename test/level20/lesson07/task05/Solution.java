@@ -15,11 +15,6 @@ public class Solution implements Serializable, Runnable {
     transient private Thread runner;
     private int speed;
 
-    public static void main(String[] args)
-    {
-        
-    }
-
     public Solution(int speed) {
         this.speed = speed;
         runner = new Thread(this);
@@ -43,5 +38,7 @@ public class Solution implements Serializable, Runnable {
 
     private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException {
         in.defaultReadObject();
+        runner = new Thread(this);
+        runner.start();
     }
 }
